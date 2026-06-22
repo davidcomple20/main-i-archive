@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳洲幸运10 · 日常查阅笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f6f3;
+      font-family: -apple-system, "PingFang SC", "Noto Sans SC", "Lantinghei SC", system-ui, sans-serif;
+      color: #2b2b2b;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.8rem 1.8rem 4rem;
+    }
+
+    /* hero 横幅——极简标题区 */
+    .hero {
+      margin-bottom: 3.2rem;
+      border-bottom: 1px solid #dcd9d4;
+      padding-bottom: 2rem;
+    }
+
+    .hero__label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8b857c;
+      margin-bottom: 0.6rem;
+      font-weight: 400;
+    }
+
+    .hero__title {
+      font-size: 2.4rem;
+      font-weight: 320;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #1e1e1e;
+    }
+
+    .hero__sub {
+      font-size: 1rem;
+      color: #5e5a54;
+      margin-top: 0.6rem;
+      font-weight: 350;
+    }
+
+    /* 背景说明卡片——留白+轻盈底纹 */
+    .context-card {
+      background: rgba(235, 232, 225, 0.35);
+      padding: 2rem 1.8rem;
+      border-radius: 24px;
+      margin-bottom: 2.8rem;
+      backdrop-filter: blur(2px);
+      border: 1px solid #eae7e1;
+    }
+
+    .context-card p {
+      font-size: 1.05rem;
+      color: #2f2d2a;
+    }
+
+    .context-card p + p {
+      margin-top: 1.2rem;
+    }
+
+    /* 三段自然介绍——文章式段落 */
+    .essay-section {
+      margin-bottom: 2rem;
+    }
+
+    .essay-section h2 {
+      font-weight: 380;
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      color: #262422;
+      margin: 2.2rem 0 1rem 0;
+      padding-left: 0.4rem;
+      border-left: 3px solid #b6ada3;
+      line-height: 1.3;
+    }
+
+    .essay-section p {
+      margin-bottom: 1.3rem;
+      font-size: 1rem;
+      color: #33312e;
+    }
+
+    .essay-section a {
+      color: #3d5a5c;
+      text-decoration: none;
+      border-bottom: 1px solid #bcc9c9;
+      transition: border-color 0.2s;
+    }
+
+    .essay-section a:hover {
+      border-bottom-color: #2d4a4c;
+    }
+
+    /* 摘录/提示块——像边注 */
+    .inset-note {
+      background: #f0eee9;
+      padding: 1.6rem 1.8rem;
+      border-radius: 20px;
+      margin: 2.4rem 0 2.8rem;
+      font-style: normal;
+      border-left: 4px solid #b4a89c;
+    }
+
+    .inset-note p {
+      margin-bottom: 0.5rem;
+    }
+
+    .inset-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FAQ 摘要（极简样式） */
+    .faq-mini {
+      margin: 3rem 0 2.5rem;
+    }
+
+    .faq-mini h3 {
+      font-weight: 370;
+      font-size: 1.2rem;
+      color: #2f2c28;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #3b3a37;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item span {
+      font-size: 0.95rem;
+      color: #54514b;
+    }
+
+    /* 页尾 */
+    .page-footer {
+      margin-top: 3.8rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #dcd9d4;
+      font-size: 0.9rem;
+      color: #706c65;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .page-footer .footer-hint {
+      letter-spacing: 0.02em;
+    }
+
+    .page-footer a {
+      color: #3b5a5b;
+      text-decoration: none;
+      border-bottom: 1px solid #c4cfcf;
+    }
+
+    .page-footer a:hover {
+      border-bottom-color: #2c4a4b;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      .page-wrap {
+        padding: 2rem 1.2rem 3rem;
+      }
+
+      .hero__title {
+        font-size: 1.9rem;
+      }
+
+      .context-card {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .essay-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero -->
+  <header class="hero">
+    <div class="hero__label">• 日常参考</div>
+    <h1 class="hero__title">澳洲幸运10<br>查阅与对照</h1>
+    <div class="hero__sub">一份安静的内容索引，适合随手翻看</div>
+  </header>
+
+  <!-- 背景说明卡片 -->
+  <div class="context-card">
+    <p>
+      对于经常关注号码趋势的朋友来说，一个清晰、无干扰的查阅环境比什么都重要。<strong>澳洲幸运10</strong> 的节奏快、数字区间宽，很多时候我们需要的不是催促式的推送，而是一片可以安静对照、反复浏览的页面。这里没有闪烁的弹窗，只有朴素的数据陈列与延伸阅读的入口。
+    </p>
+    <p>
+      本页围绕日常查询与内容延伸设计，把注意力还给数字本身。
+    </p>
+  </div>
+
+  <!-- 三段自然介绍 -->
+  <div class="essay-section">
+    <h2>从日常查询说起</h2>
+    <p>
+      习惯每天花几分钟扫一眼最新结果，是很多人的固定动作。比起在应用里翻找菜单，一个直达、少装饰的页面反而更省心力。打开 <a href="https://au10-result.com">澳洲幸运10</a> 的页面，最近几期的号码清晰排列，左右对照就能发现一些简单规律。不需要注册，不用等待加载无关模块，信息就在那里。
+    </p>
+  </div>
+
+  <div class="essay-section">
+    <h2>对照中的细微感受</h2>
+    <p>
+      把连续几期的结果并列在一起，偶尔能看出某种节奏——冷号回补、热号延续，或者某段区间的密集出现。这些观察本身不构成任何保证，但它们让查阅这件事多了一点点属于自己的理解。网站提供的列表干净利落，适合自己拿纸笔或表格做简单记录，形成个人的对照习惯。
+    </p>
+    <p>
+      除了基本号码，页面偶尔会附带一些历史统计，比如出现频率或跨度分布，适合在安静的时候慢慢翻看。
+    </p>
+  </div>
+
+  <div class="essay-section">
+    <h2>延伸阅读与自我节奏</h2>
+    <p>
+      很多人除了看最新结果，也会翻一翻往期数据，或者关注号码的区间分布、奇偶比例等侧面信息。这时候一个没有杂音的内容环境就很重要——你可以自由地前后翻看，而不被引导到不相干的地方。<a href="https://au10-result.com">澳洲幸运10</a> 的内容组织方式比较朴素，但恰恰因为朴素，反而更容易让人沉浸在自己的思路里。
+    </p>
+    <p>
+      对于一些希望了解更多背景的新朋友，网站上也有关于规则和术语的基础说明，可以作为延伸阅读的起点。
+    </p>
+  </div>
+
+  <!-- 摘录提示块 -->
+  <div class="inset-note">
+    <p>📌 一点个人经验：不妨把每次查阅当作一次短暂的专注练习，不贪多，只看两三个自己关心的维度。久而久之，你会形成自己的判断习惯——这比任何推荐都可靠。</p>
+  </div>
+
+  <!-- FAQ 摘要（极简，非硬广） -->
+  <div class="faq-mini">
+    <h3>常见疑问 · 简短说明</h3>
+    <div class="faq-item">
+      <strong>结果更新频率？</strong>
+      <span>每期结束后页面会同步更新，通常延迟极短。具体以官网时间为准。</span>
+    </div>
+    <div class="faq-item">
+      <strong>历史数据保留多久？</strong>
+      <span>可查阅近一段时间的完整记录，方便回溯对比。</span>
+    </div>
+    <div class="faq-item">
+      <strong>是否需要注册或付费？</strong>
+      <span>完全免费，打开即用，无需任何账号。</span>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <footer class="page-footer">
+    <div class="footer-hint">
+      如果你想直接浏览最新结果或查看往期记录，可以随时前往
+      <a href="https://au10-result.com">澳洲幸运10</a> 页面。
+    </div>
+    <div style="font-size:0.85rem; opacity:0.7;">
+      保持自己的节奏，比什么都重要。
+    </div>
+  </footer>
+</div>
+</body>
+</html>
